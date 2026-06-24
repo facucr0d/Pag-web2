@@ -1,0 +1,497 @@
+<!DOCTYPE html><html class="dark" lang="es" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Joaquín Facundo | Portfolio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=Geist:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&amp;family=Inter:wght@100..900&amp;family=Plus+Jakarta+Sans:wght@100..900&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-dim": "#101415",
+                        "primary": "#a4c9ff",
+                        "surface-container-lowest": "#0b0f10",
+                        "on-primary": "#00315d",
+                        "background": "#101415",
+                        "on-error": "#690005",
+                        "error": "#ffb4ab",
+                        "on-secondary": "#3c0091",
+                        "primary-fixed": "#d4e3ff",
+                        "surface-variant": "#323537",
+                        "outline": "#8b919d",
+                        "tertiary-fixed-dim": "#bec6e0",
+                        "on-tertiary-fixed-variant": "#3f465c",
+                        "inverse-on-surface": "#2d3133",
+                        "inverse-primary": "#0060ac",
+                        "primary-container": "#60a5fa",
+                        "on-secondary-fixed-variant": "#5516be",
+                        "on-tertiary-fixed": "#131b2e",
+                        "surface-container-highest": "#323537",
+                        "secondary-fixed-dim": "#d0bcff",
+                        "on-primary-fixed": "#001c39",
+                        "surface-container-low": "#191c1e",
+                        "outline-variant": "#414751",
+                        "surface-bright": "#363a3b",
+                        "on-surface-variant": "#c1c7d3",
+                        "tertiary-container": "#9aa2bb",
+                        "surface": "#101415",
+                        "secondary-fixed": "#e9ddff",
+                        "on-surface": "#e0e3e5",
+                        "on-secondary-container": "#c4abff",
+                        "secondary": "#d0bcff",
+                        "tertiary-fixed": "#dae2fd",
+                        "primary-fixed-dim": "#a4c9ff",
+                        "on-secondary-fixed": "#23005c",
+                        "surface-container-high": "#272a2c",
+                        "on-error-container": "#ffdad6",
+                        "on-background": "#e0e3e5",
+                        "surface-tint": "#a4c9ff",
+                        "error-container": "#93000a",
+                        "secondary-container": "#571bc1",
+                        "on-tertiary": "#283044",
+                        "surface-container": "#1d2022",
+                        "on-tertiary-container": "#31384d",
+                        "on-primary-container": "#003a6b",
+                        "inverse-surface": "#e0e3e5",
+                        "tertiary": "#bec6e0",
+                        "on-primary-fixed-variant": "#004883"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-lg": "4rem",
+                        "margin-mobile": "1rem",
+                        "stack-sm": "1rem",
+                        "stack-md": "2rem",
+                        "container-max": "1100px",
+                        "gutter": "1.5rem"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Plus Jakarta Sans"],
+                        "headline-lg": ["Plus Jakarta Sans"],
+                        "headline-lg-mobile": ["Plus Jakarta Sans"],
+                        "headline-display": ["Plus Jakarta Sans"],
+                        "body-md": ["Inter"],
+                        "label-md": ["Geist"],
+                        "body-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "headline-lg": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "headline-lg-mobile": ["28px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "headline-display": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "label-md": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: #101415;
+            color: #e0e3e5;
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+        
+        .glass-card {
+            background: rgba(30, 35, 40, 0.4);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .glass-card:hover {
+            border-color: rgba(96, 165, 250, 0.3);
+            background: rgba(35, 45, 55, 0.6);
+            box-shadow: 0 0 30px rgba(96, 165, 250, 0.05);
+        }
+
+        .gradient-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: radial-gradient(circle at 0% 0%, #001c39 0%, transparent 40%),
+                        radial-gradient(circle at 100% 100%, #101415 0%, #0b0f10 100%);
+            z-index: -1;
+        }
+
+        .text-glow {
+            text-shadow: 0 0 15px rgba(164, 201, 255, 0.4);
+        }
+
+        .nav-link {
+            position: relative;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #a4c9ff;
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: rgba(164, 201, 255, 0.2);
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body class="font-body-md text-body-md custom-scrollbar">
+<div class="gradient-bg"></div>
+<!-- TopNavBar -->
+<header class="sticky top-0 w-full z-50 bg-surface/80 backdrop-blur-xl border-b border-white/10 shadow-sm">
+<div class="flex justify-between items-center px-gutter max-w-container-max mx-auto h-16">
+<a class="font-headline-md text-headline-md font-bold text-primary" href="#">Joaquín Facundo</a>
+<nav class="hidden md:flex gap-8">
+<a class="font-label-md text-label-md uppercase tracking-wider text-primary opacity-100 nav-link" href="#about">Sobre mí</a>
+<a class="font-label-md text-label-md uppercase tracking-wider text-on-surface opacity-60 hover:opacity-100 hover:text-primary transition-all duration-300 nav-link" href="#formation">Formación</a>
+<a class="font-label-md text-label-md uppercase tracking-wider text-on-surface opacity-60 hover:opacity-100 hover:text-primary transition-all duration-300 nav-link" href="#courses">Cursos</a>
+<a class="font-label-md text-label-md uppercase tracking-wider text-on-surface opacity-60 hover:opacity-100 hover:text-primary transition-all duration-300 nav-link" href="#classmates">Compañeros</a>
+<a class="font-label-md text-label-md uppercase tracking-wider text-on-surface opacity-60 hover:opacity-100 hover:text-primary transition-all duration-300 nav-link" href="#contact">Contacto</a>
+</nav>
+<a class="bg-primary text-on-primary px-5 py-2 rounded-lg font-label-md text-label-md uppercase tracking-wider hover:brightness-110 transition-all" href="#">
+                Descargar CV
+            </a>
+</div>
+</header>
+<main class="max-w-container-max mx-auto px-gutter py-stack-lg">
+<!-- Hero Section -->
+<section class="flex flex-col md:flex-row items-center gap-12 mb-24 transition-all duration-700 opacity-100 translate-y-0">
+<div class="w-full md:w-1/2 space-y-6">
+<div class="inline-flex items-center gap-2 px-3 py-1 glass-card rounded-full border border-white/10">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-md text-label-md text-primary-fixed-dim uppercase">Disponible para proyectos</span>
+</div>
+<h1 class="font-headline-display text-headline-display text-glow">
+                    Joaquín Facundo <br>
+<span class="text-primary">Calle Rodriguez</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+                    Estudiante de Ciencias de la Computación en la Universidad Católica San Pablo (UCSP), apasionado por el análisis de datos y el razonamiento lógico.
+                </p>
+<div class="flex gap-4">
+<a class="bg-primary text-on-primary px-8 py-3 rounded-xl font-label-md text-label-md uppercase transition-all hover:scale-105" href="#contact">
+                        Hablemos
+                    </a>
+<a class="glass-card px-8 py-3 rounded-xl font-label-md text-label-md uppercase border border-white/10 hover:border-primary/50 transition-all" href="#about">
+                        Ver Perfil
+                    </a>
+</div>
+</div>
+<div class="w-full md:w-1/2 relative group">
+<div class="absolute -inset-4 bg-primary/20 blur-3xl opacity-20 group-hover:opacity-40 transition-opacity"></div>
+<div class="glass-card p-2 rounded-[2rem] relative overflow-hidden aspect-[0.75] shadow-2xl">
+<img class="w-full h-full object-cover rounded-[1.8rem] brightness-90 contrast-110 group-hover:scale-105 transition-transform duration-700" data-alt="A professional portrait of a young computer science student in a high-tech environment. The lighting is moody with deep blues and crisp highlights, reflecting a screen's glow. The aesthetic is clean, modern, and high-end, mirroring a premium professional digital portfolio. The background features subtle geometric patterns of code and abstract neural networks." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1tNdYpfxKWGCY-kJ6HL4aPsnFLpNZZbuf91zsC3FSki08U-dP295vNXYP5Jfi_MOM6t47cCOzdsAFwVn587jinBdT-vf2fU3URodEsjVwnsO-DKYax13hq0DHxIf-6JFJ-mPSLBnstgj0m4fxu_2MiriRJfaZY1BEE--oX4Akp3U9dkE1ZBkMrKbVx-_YYXd4x_QT1YJcwLb-9KWfHlv6D_d0FpIVexPr3nbd5Gi8RAY0G2rUj2texp1uiusra-hdvbLbV6sP2Os">
+</div>
+</div>
+</section>
+<!-- Bento Grid: Personal Info -->
+<section class="mb-24 scroll-mt-24 transition-all duration-700 opacity-100 translate-y-0" id="about">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Bio -->
+<div class="md:col-span-2 glass-card p-8 rounded-3xl flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-3 mb-4 text-primary">
+<span class="material-symbols-outlined">person</span>
+<h2 class="font-headline-md text-headline-md">Sobre mí</h2>
+</div>
+<p class="text-on-surface-variant font-body-md leading-relaxed mb-6">
+                            Soy una persona amable que puede ser muy analítica cuando se requiere. Me gusta tomarme las cosas en serio cuando la situación lo amerita, pero también valoro el equilibrio y el disfrute. Tengo 17 años y actualmente resido en la hermosa ciudad de Arequipa, Perú, donde desarrollo mi carrera académica y profesional.
+                        </p>
+</div>
+<div class="flex flex-wrap gap-4 mt-4">
+<div class="glass-card px-6 py-4 rounded-2xl flex-1 min-w-[140px]">
+<span class="text-on-surface-variant text-label-md block mb-1">Edad</span>
+<span class="text-primary font-headline-md">17 Años</span>
+</div>
+<div class="glass-card px-6 py-4 rounded-2xl flex-1 min-w-[140px]">
+<span class="text-on-surface-variant text-label-md block mb-1">Ubicación</span>
+<span class="text-primary font-headline-md">Arequipa</span>
+</div>
+<div class="glass-card px-6 py-4 rounded-2xl flex-1 min-w-[140px]">
+<span class="text-on-surface-variant text-label-md block mb-1">Inglés</span>
+<span class="text-primary font-headline-md">Nivel B2</span>
+</div>
+</div>
+</div>
+<!-- Skills -->
+<div class="glass-card p-8 rounded-3xl">
+<div class="flex items-center gap-3 mb-6 text-primary">
+<span class="material-symbols-outlined">psychology</span>
+<h2 class="font-headline-md text-headline-md">Habilidades</h2>
+</div>
+<div class="space-y-4">
+<div class="flex flex-col gap-2">
+<span class="text-label-md text-on-surface-variant uppercase">Intereses &amp; Soft Skills</span>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 glass-card bg-surface-container/50 rounded-full text-label-md border border-primary/20">Deportes</span>
+<span class="px-3 py-1 glass-card bg-surface-container/50 rounded-full text-label-md border border-primary/20">Videojuegos</span>
+<span class="px-3 py-1 glass-card bg-surface-container/50 rounded-full text-label-md border border-primary/20">Análisis</span>
+<span class="px-3 py-1 glass-card bg-surface-container/50 rounded-full text-label-md border border-primary/20">Razonamiento</span>
+</div>
+</div>
+<hr class="border-white/5 my-4">
+<div class="flex flex-col gap-3">
+<div class="flex justify-between items-center">
+<span class="text-body-md">Pensamiento Crítico</span>
+<span class="text-primary font-label-md">Avanzado</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[90%]"></div>
+</div>
+</div>
+<div class="flex flex-col gap-3">
+<div class="flex justify-between items-center">
+<span class="text-body-md">Análisis de Datos</span>
+<span class="text-primary font-label-md">En Proceso</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[75%]"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Formation Section -->
+<section class="mb-24 scroll-mt-24 transition-all duration-700 opacity-100 translate-y-0" id="formation">
+<h2 class="font-headline-lg text-headline-lg mb-8 text-center">Trayectoria <span class="text-primary">Académica</span></h2>
+<div class="relative max-w-3xl mx-auto">
+<div class="absolute left-0 md:left-1/2 top-0 bottom-0 w-px bg-white/10 -translate-x-1/2"></div>
+<!-- Education Item -->
+<div class="relative pl-8 md:pl-0 mb-12 md:flex md:justify-between items-center w-full">
+<div class="hidden md:block w-[45%] text-right pr-12">
+<span class="text-primary font-label-md uppercase">2025 - Actualidad</span>
+<h3 class="text-headline-md font-headline-md">Ciencias de la Computación</h3>
+<p class="text-on-surface-variant">Universidad Católica San Pablo</p>
+</div>
+<div class="absolute left-0 md:left-1/2 w-4 h-4 bg-primary rounded-full -translate-x-1/2 shadow-[0_0_15px_rgba(164,201,255,0.6)]"></div>
+<div class="md:hidden">
+<span class="text-primary font-label-md uppercase">2025 - Actualidad</span>
+<h3 class="text-headline-md font-headline-md">CS - UCSP</h3>
+</div>
+<div class="md:w-[45%] md:pl-12">
+<div class="glass-card p-6 rounded-2xl">
+<p class="text-on-surface-variant text-body-md">Enfoque en desarrollo de software, algoritmos y estructura de datos bajo estándares internacionales.</p>
+</div>
+</div>
+</div>
+<!-- Education Item 2 -->
+<div class="relative pl-8 md:pl-0 mb-4 md:flex md:justify-between items-center w-full flex-row-reverse">
+<div class="hidden md:block w-[45%] text-left pl-12">
+<span class="text-primary font-label-md uppercase">Egresado</span>
+<h3 class="text-headline-md font-headline-md">Educación Secundaria</h3>
+<p class="text-on-surface-variant">Innova Schools</p>
+</div>
+<div class="absolute left-0 md:left-1/2 w-4 h-4 bg-primary/40 border border-primary/20 rounded-full -translate-x-1/2"></div>
+<div class="md:hidden">
+<span class="text-primary font-label-md uppercase">Egresado</span>
+<h3 class="text-headline-md font-headline-md">Innova Schools</h3>
+</div>
+<div class="md:w-[45%] md:pr-12 text-right">
+<div class="glass-card p-6 rounded-2xl">
+<p class="text-on-surface-variant text-body-md">Formación basada en aprendizaje colaborativo y desarrollo de proyectos multidisciplinarios.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Courses & Professors -->
+<section class="mb-24 scroll-mt-24 transition-all duration-700 opacity-100 translate-y-0" id="courses">
+<div class="flex justify-between items-end mb-8">
+<div>
+<h2 class="font-headline-lg text-headline-lg">Cursos &amp; <span class="text-primary">Docentes</span></h2>
+<p class="text-on-surface-variant">Asignaturas actuales y referentes académicos.</p>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Course Card -->
+<div class="glass-card p-6 rounded-2xl border-l-4 border-l-primary">
+<span class="text-label-md text-primary font-label-md uppercase mb-2 block">Ciclo I</span>
+<h4 class="font-headline-md text-headline-md mb-4">Introducción a la Vida Universitaria</h4>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">person</span>
+</div>
+<div>
+<span class="text-on-surface-variant text-label-md block">Docente</span>
+<span class="text-body-md font-medium">Claudia Lucia Quiroz Pacheco</span>
+</div>
+</div>
+</div>
+<div class="glass-card p-6 rounded-2xl border-l-4 border-l-primary">
+<span class="text-label-md text-primary font-label-md uppercase mb-2 block">Ciclo I</span>
+<h4 class="font-headline-md text-headline-md mb-4">Comunicación IV</h4>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">person</span>
+</div>
+<div>
+<span class="text-on-surface-variant text-label-md block">Docente</span>
+<span class="text-body-md font-medium">Lourdes Eliana Velarde Ortiz</span>
+</div>
+</div>
+</div>
+<div class="glass-card p-6 rounded-2xl border-l-4 border-l-primary">
+<span class="text-label-md text-primary font-label-md uppercase mb-2 block">Ciclo I</span>
+<h4 class="font-headline-md text-headline-md mb-4">Lógica</h4>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">person</span>
+</div>
+<div>
+<span class="text-on-surface-variant text-label-md block">Docente</span>
+<span class="text-body-md font-medium">Solange Tejada Cuadros</span><a href="https://www.linkedin.com/in/solange-tejada/" target="_blank" class="inline-flex items-center ml-2 text-primary hover:opacity-80 transition-opacity"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg></a>
+</div>
+</div>
+</div>
+<div class="glass-card p-6 rounded-2xl border-l-4 border-l-primary"><span class="text-label-md text-primary font-label-md uppercase mb-2 block">Ciclo I</span><h4 class="font-headline-md text-headline-md mb-4">Fundamentos de Programación</h4><div class="flex items-center gap-3"><div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center"><span class="material-symbols-outlined text-primary">person</span></div><div><span class="text-on-surface-variant text-label-md block">Docente</span><span class="text-body-md font-medium">Kelly Vizconde La Motta</span><a href="https://www.linkedin.com/in/kelly-vizconde-la-motta-3a57a4143/" target="_blank" class="inline-flex items-center ml-2 text-primary hover:opacity-80 transition-opacity"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg></a></div></div></div><div class="glass-card p-6 rounded-2xl border-l-4 border-l-primary"><span class="text-label-md text-primary font-label-md uppercase mb-2 block">Ciclo I</span><h4 class="font-headline-md text-headline-md mb-4">Fundamentos Matemáticos para Computación</h4><div class="flex items-center gap-3"><div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center"><span class="material-symbols-outlined text-primary">person</span></div><div><span class="text-on-surface-variant text-label-md block">Docente</span><span class="text-body-md font-medium">Fiorella Rendón García</span><a href="https://www.linkedin.com/in/fiorella-maría-rendón-garcía-7aa9b7374/" target="_blank" class="inline-flex items-center ml-2 text-primary hover:opacity-80 transition-opacity"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg></a></div></div></div><div class="glass-card p-6 rounded-2xl border-l-4 border-l-primary"><span class="text-label-md text-primary font-label-md uppercase mb-2 block">Ciclo I</span><h4 class="font-headline-md text-headline-md mb-4">Introducción a Computación</h4><div class="flex items-center gap-3"><div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center"><span class="material-symbols-outlined text-primary">person</span></div><div><span class="text-on-surface-variant text-label-md block">Docente</span><span class="text-body-md font-medium">Ernesto Cuadros Vargas</span><a href="https://www.linkedin.com/in/ecuadrosv/" target="_blank" class="inline-flex items-center ml-2 text-primary hover:opacity-80 transition-opacity"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg></a></div></div></div></div>
+</section>
+<!-- Classmates Section -->
+<section class="mb-24 scroll-mt-24 transition-all duration-700 opacity-100 translate-y-0" id="classmates">
+<h2 class="font-headline-lg text-headline-lg mb-8">Red de <span class="text-primary">Compañeros</span></h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4"><a class="glass-card p-4 rounded-xl hover:translate-y-[-4px] transition-all flex items-center gap-4 group" href="https://fabrizioflv.github.io/fabrizio-web/" target="_blank"><div class="w-12 h-12 rounded-lg bg-surface-container-highest flex items-center justify-center group-hover:bg-primary/20 transition-colors"><span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary">link</span></div><div><span class="font-body-md block font-semibold">Fabrizio Flores</span><span class="text-label-md text-on-surface-variant">Ver Portfolio</span></div></a><a class="glass-card p-4 rounded-xl hover:translate-y-[-4px] transition-all flex items-center gap-4 group" href="#" target="_blank"><div class="w-12 h-12 rounded-lg bg-surface-container-highest flex items-center justify-center group-hover:bg-primary/20 transition-colors"><span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary">link</span></div><div><span class="font-body-md block font-semibold">Eros Caldenhoven</span><span class="text-label-md text-on-surface-variant">Ver Portfolio</span></div></a><a class="glass-card p-4 rounded-xl hover:translate-y-[-4px] transition-all flex items-center gap-4 group" href="#" target="_blank"><div class="w-12 h-12 rounded-lg bg-surface-container-highest flex items-center justify-center group-hover:bg-primary/20 transition-colors"><span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary">link</span></div><div><span class="font-body-md block font-semibold">Jaime Chavez</span><span class="text-label-md text-on-surface-variant">Ver Portfolio</span></div></a><a class="glass-card p-4 rounded-xl hover:translate-y-[-4px] transition-all flex items-center gap-4 group" href="https://faviom15.github.io/favio-cesar-portfolio/" target="_blank"><div class="w-12 h-12 rounded-lg bg-surface-container-highest flex items-center justify-center group-hover:bg-primary/20 transition-colors"><span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary">link</span></div><div><span class="font-body-md block font-semibold">Favio Mendigure</span><span class="text-label-md text-on-surface-variant">Ver Portfolio</span></div></a></div>
+</section>
+<!-- Contact Section -->
+<section class="mb-24 scroll-mt-24 transition-all duration-700 opacity-100 translate-y-0" id="contact">
+<div class="glass-card rounded-[3rem] p-12 overflow-hidden relative">
+<div class="absolute top-0 right-0 w-64 h-64 bg-primary/10 blur-[100px] -mr-32 -mt-32"></div>
+<div class="flex flex-col lg:flex-row gap-12 relative z-10">
+<div class="lg:w-1/2">
+<h2 class="font-headline-display text-headline-display mb-6">¿Interesado en <span class="text-primary">colaborar</span>?</h2>
+<p class="text-on-surface-variant font-body-lg mb-8 max-w-md">
+                            Estoy abierto a oportunidades de investigación, proyectos de software o simplemente una charla sobre tecnología y ciencias de la computación.
+                        </p>
+<div class="space-y-6">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">mail</span>
+</div>
+<div>
+<span class="text-label-md text-on-surface-variant block">Email</span>
+<a class="text-body-md font-medium hover:text-primary transition-colors" href="mailto:joaquin.calle@ucsp.edu.pe">joaquin.calle@ucsp.edu.pe</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">call</span>
+</div>
+<div>
+<span class="text-label-md text-on-surface-variant block">Teléfono</span>
+<a class="text-body-md font-medium hover:text-primary transition-colors" href="tel:+51992611623">+51 992 611 623</a>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:w-1/2 glass-card bg-surface-container/30 p-8 rounded-3xl">
+<form class="space-y-4">
+<div class="grid grid-cols-2 gap-4">
+<div class="space-y-2">
+<label class="text-label-md text-on-surface-variant uppercase">Nombre</label>
+<input class="w-full bg-surface-dim border border-white/10 rounded-xl px-4 py-3 focus:border-primary focus:ring-0 outline-none transition-all" placeholder="Tu nombre" type="text">
+</div>
+<div class="space-y-2">
+<label class="text-label-md text-on-surface-variant uppercase">Email</label>
+<input class="w-full bg-surface-dim border border-white/10 rounded-xl px-4 py-3 focus:border-primary focus:ring-0 outline-none transition-all" placeholder="tu@email.com" type="email">
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-label-md text-on-surface-variant uppercase">Mensaje</label>
+<textarea class="w-full bg-surface-dim border border-white/10 rounded-xl px-4 py-3 focus:border-primary focus:ring-0 outline-none transition-all resize-none" placeholder="¿En qué puedo ayudarte?" rows="4"></textarea>
+</div>
+<button class="w-full bg-primary text-on-primary py-4 rounded-xl font-headline-md hover:brightness-110 transition-all flex items-center justify-center gap-2" type="submit">
+                                Enviar Mensaje
+                                <span class="material-symbols-outlined">send</span>
+</button>
+</form>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-stack-md bg-surface-container-lowest border-t border-white/10">
+<div class="flex flex-col md:flex-row justify-between items-center px-gutter max-w-container-max mx-auto gap-4">
+<div class="flex flex-col items-center md:items-start gap-1">
+<span class="font-headline-md text-headline-md text-on-surface">Joaquín Facundo</span>
+<p class="font-body-md text-body-md text-on-surface-variant">© 2024 Joaquín Facundo Calle Rodriguez. Estudiante de CS - UCSP.</p>
+</div>
+<div class="flex gap-6">
+<a class="text-on-surface-variant hover:text-primary transition-colors flex items-center gap-2" href="https://www.linkedin.com/in/facundo-calle-9a10a3419/" target="_blank">
+<span class="material-symbols-outlined text-body-md">share</span> LinkedIn
+                </a>
+<a class="text-on-surface-variant hover:text-primary transition-colors flex items-center gap-2" href="https://www.instagram.com/facundocalleee/" target="_blank">
+<span class="material-symbols-outlined text-body-md">photo_camera</span> Instagram
+                </a>
+<a class="text-on-surface-variant hover:text-primary transition-colors flex items-center gap-2" href="mailto:joaquin.calle@ucsp.edu.pe">
+<span class="material-symbols-outlined text-body-md">alternate_email</span> Email
+                </a>
+</div>
+</div>
+</footer>
+<script>
+        // Smooth scroll reveal observer
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
+            observer.observe(section);
+        });
+
+        // Form submission micro-interaction
+        document.querySelector('form')?.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const btn = e.target.querySelector('button');
+            const originalText = btn.innerHTML;
+            btn.innerHTML = '<span class="material-symbols-outlined animate-spin">sync</span> Enviando...';
+            btn.disabled = true;
+            
+            setTimeout(() => {
+                btn.innerHTML = '<span class="material-symbols-outlined">check_circle</span> Mensaje Enviado';
+                btn.classList.add('bg-green-500', 'text-white');
+                e.target.reset();
+            }, 1500);
+        });
+    </script>
+
+
+</body></html>
